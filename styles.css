@@ -43,53 +43,7 @@ nav a {
 nav a:hover {
     color: #ADD8E6; /* Light Blue */
 }
-/* FAQ Section */
-.faq-container {
-    max-width: 800px;
-    margin: 40px auto;
-    background-color: #000080; /* Slightly Darker Blue */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.5); /* Gold Glow */
-}
 
-/* FAQ Question */
-.faq-question {
-    width: 100%;
-    background-color: #00008B; /* Dark Blue */
-    color: #FFD700; /* Gold */
-    border: none;
-    padding: 15px;
-    text-align: left;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s;
-    border-bottom: 2px solid #FFD700; /* Gold Border */
-}
-
-.faq-question:hover {
-    background-color: #FFD700; /* Gold */
-    color: #00008B; /* Dark Blue */
-}
-/* FAQ Answer */
-.faq-answer {
-    background-color: #E3F2FD; /* Light Blue */
-    color: #00008B; /* Dark Blue */
-    overflow: hidden;
-    max-height: 0;
-    padding: 0 15px;
-    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-    border-left: 5px solid #FFD700; /* Gold Accent */
-    font-size: 16px;
-    border-radius: 5px;
-}
-
-
-/* Expand when active */
-.faq.active .faq-answer {
-    display: block;
-}
 /* FAQ Section */
 .faq-container {
     max-width: 800px;
@@ -138,13 +92,57 @@ nav a:hover {
     display: block;
 }
 
+/* Socials Page Styles */
+.socials-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #1A237E; /* Softer Dark Blue */
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.5); /* Gold Glow */
+}
+
+.socials-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Social Links */
+.social-link {
+    display: flex;
+    align-items: center;
+    background-color: #3949AB; /* Softer Dark Blue */
+    color: #FFD700; /* Gold */
+    padding: 12px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0px 4px 6px rgba(255, 215, 0, 0.3);
+}
+
+.social-link img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.social-link:hover {
+    background-color: #FFD700; /* Gold */
+    color: #00008B; /* Dark Blue */
+    transform: scale(1.05);
+}
+
 /* Responsive Design */
 @media screen and (max-width: 600px) {
-    .faq-container {
+    .faq-container, .socials-container {
         width: 90%;
     }
 
-    .faq-question {
+    .faq-question, .social-link {
         font-size: 16px;
     }
 
