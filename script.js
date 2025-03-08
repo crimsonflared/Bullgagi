@@ -31,7 +31,7 @@ function calculateGrade(tabId) {
             quizCount++;
         }
     });
-    let quizPercentage = quizCount > 0 ? (totalQuizScore / (quizCount * 15)) * 30 : 0; 
+    let quizPercentage = quizCount > 0 ? (totalQuizScore / (quizCount * 15)) * 30 : 0;
 
     // Performance Task (25%)
     let totalPerformanceScore = 0, performanceCount = 0;
@@ -41,33 +41,19 @@ function calculateGrade(tabId) {
             performanceCount++;
         }
     });
-    let performancePercentage = performanceCount > 0 ? (totalPerformanceScore / (performanceCount * 30)) * 25 : 0; 
+    let performancePercentage = performanceCount > 0 ? (totalPerformanceScore / (performanceCount * 30)) * 25 : 0;
 
     // Reflective Journal (5%)
     let journalScore = parseFloat(journalInput.value) || 0;
     let journalPercentage = (journalScore / 5) * 5;
 
-    // Final Grade
+    // Final Grade Calculation
     let finalGrade = (majorExam + quizPercentage + performancePercentage + journalPercentage).toFixed(2);
 
-    // Display result
+    // Display Result
     document.querySelector(`#${tabId} .result`).textContent = `Final Grade: ${finalGrade}`;
 }
 
-//document.addEventListener("DOMContentLoaded", () => {
-  //  document.getElementById("course1").style.display = "block";  
-//});
-document.addEventListener("DOMContentLoaded", function() {
-    let faqButtons = document.querySelectorAll(".faq-question");
-
-    faqButtons.forEach(button => {
-        button.addEventListener("click", function() {
-            let answer = this.nextElementSibling;
-            if (answer.style.display === "block") {
-                answer.style.display = "none";
-            } else {
-                answer.style.display = "block";
-            }
-        });
-    });
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("course1").style.display = "block";  
 });
