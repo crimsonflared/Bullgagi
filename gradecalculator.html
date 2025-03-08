@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,13 +18,66 @@
             <a href="grade-calculator.html">Grade Calculator</a>
         </nav>
     </header>
+
     <main>
-        <h2>Enter your grades</h2>
-        <input type="number" id="grade1" placeholder="Grade 1">
-        <input type="number" id="grade2" placeholder="Grade 2">
-        <input type="number" id="grade3" placeholder="Grade 3">
-        <button onclick="calculateGrade()">Calculate</button>
-        <p id="result"></p>
+        <h2>Select Your Course</h2>
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab(event, 'course1')">Course 1</button>
+            <button class="tab-button" onclick="openTab(event, 'course2')">Course 2</button>
+            <button class="tab-button" onclick="openTab(event, 'course3')">Course 3</button>
+            <button class="tab-button" onclick="openTab(event, 'course4')">Course 4</button>
+            <button class="tab-button" onclick="openTab(event, 'course5')">Course 5</button>
+            <button class="tab-button" onclick="openTab(event, 'course6')">Course 6</button>
+            <button class="tab-button" onclick="openTab(event, 'course7')">Course 7</button>
+            <button class="tab-button" onclick="openTab(event, 'course8')">Course 8</button>
+            <button class="tab-button" onclick="openTab(event, 'ge')">GE Courses</button>
+        </div>
+
+        <!-- Grade Input Sections -->
+        <div id="course1" class="tab-content active">
+            <h3>Course 1</h3>
+            <label>Major Exam (out of 100):</label>
+            <input type="number" class="major-exam" placeholder="Score">
+            
+            <label>Quizzes:</label>
+            <input type="number" class="quiz" placeholder="Score 1">
+            <input type="number" class="quiz" placeholder="Score 2">
+            <input type="number" class="quiz" placeholder="Score 3">
+
+            <label>Performance Task:</label>
+            <input type="number" class="performance-task" placeholder="Score 1">
+            <input type="number" class="performance-task" placeholder="Score 2">
+
+            <label>Reflective Journal (out of 5):</label>
+            <input type="number" class="reflective-journal" placeholder="Score">
+
+            <button onclick="calculateGrade('course1')">Calculate</button>
+            <p class="result"></p>
+        </div>
+
+        <!-- Repeat for other courses -->
+        <div id="course2" class="tab-content">
+            <h3>Course 2</h3>
+            <label>Major Exam (out of 100):</label>
+            <input type="number" class="major-exam" placeholder="Score">
+            
+            <label>Quizzes:</label>
+            <input type="number" class="quiz" placeholder="Score 1">
+            <input type="number" class="quiz" placeholder="Score 2">
+            <input type="number" class="quiz" placeholder="Score 3">
+
+            <label>Performance Task:</label>
+            <input type="number" class="performance-task" placeholder="Score 1">
+            <input type="number" class="performance-task" placeholder="Score 2">
+
+            <label>Reflective Journal (out of 5):</label>
+            <input type="number" class="reflective-journal" placeholder="Score">
+
+            <button onclick="calculateGrade('course2')">Calculate</button>
+            <p class="result"></p>
+        </div>
+
+        <!-- Repeat the same structure for Course 3 to Course 8 and GE Courses -->
     </main>
 </body>
 </html>
