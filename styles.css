@@ -43,7 +43,51 @@ nav a {
 nav a:hover {
     color: #ADD8E6; /* Light Blue */
 }
+/* FAQ Section */
+.faq-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #000080; /* Slightly Darker Blue */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.5); /* Gold Glow */
+}
 
+/* FAQ Question */
+.faq-question {
+    width: 100%;
+    background-color: #00008B; /* Dark Blue */
+    color: #FFD700; /* Gold */
+    border: none;
+    padding: 15px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    border-bottom: 2px solid #FFD700; /* Gold Border */
+}
+
+.faq-question:hover {
+    background-color: #FFD700; /* Gold */
+    color: #00008B; /* Dark Blue */
+}
+
+/* FAQ Answer */
+.faq-answer {
+    background-color: #ADD8E6; /* Light Blue */
+    color: #00008B; /* Dark Blue */
+    padding: 10px;
+    display: none;
+    border-left: 5px solid #FFD700; /* Gold Accent */
+    font-size: 16px;
+    transition: max-height 0.3s ease-out;
+}
+
+/* Expand when active */
+.faq.active .faq-answer {
+    display: block;
+}
 /* FAQ Section */
 .faq-container {
     max-width: 800px;
