@@ -59,8 +59,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
     faqButtons.forEach(button => {
         button.addEventListener("click", function() {
+            // Find the parent .faq div
             const faq = this.parentElement;
+
+            // Toggle the "active" class
             faq.classList.toggle("active");
+
+            // Find the corresponding answer
+            const answer = faq.querySelector(".faq-answer");
+
+            // Toggle answer visibility
+            if (faq.classList.contains("active")) {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
         });
     });
 });
