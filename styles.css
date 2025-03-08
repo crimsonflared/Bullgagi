@@ -72,17 +72,19 @@ nav a:hover {
     background-color: #FFD700; /* Gold */
     color: #00008B; /* Dark Blue */
 }
-
 /* FAQ Answer */
 .faq-answer {
-    background-color: #ADD8E6; /* Light Blue */
+    background-color: #E3F2FD; /* Light Blue */
     color: #00008B; /* Dark Blue */
-    padding: 10px;
-    display: none;
+    overflow: hidden;
+    max-height: 0;
+    padding: 0 15px;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
     border-left: 5px solid #FFD700; /* Gold Accent */
     font-size: 16px;
-    transition: max-height 0.3s ease-out;
+    border-radius: 5px;
 }
+
 
 /* Expand when active */
 .faq.active .faq-answer {
