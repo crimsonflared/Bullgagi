@@ -1,59 +1,112 @@
+/* General Page Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #003366;
+    background-color: #001f3f;
+    color: #fff;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
+/* Header */
 header {
-    background-color: #ffd700;
-    padding: 20px;
+    background-color: #002855;
+    padding: 15px 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Navigation */
+nav {
+    margin-top: 10px;
 }
 
 nav a {
-    margin: 0 15px;
+    color: #FFD700;
     text-decoration: none;
-    color: #003366;
     font-weight: bold;
+    margin: 0 15px;
 }
 
 nav a:hover {
-    color: #ff8c00;
+    color: #FFA500;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.tab-button {
+    background-color: #003366;
+    color: white;
+    border: 2px solid #FFD700;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.tab-button:hover, .tab-button.active {
+    background-color: #FFD700;
+    color: #003366;
+}
+
+/* Grade Calculator Section */
+.grade-container {
+    max-width: 500px;
+    margin: auto;
+    background-color: #002855;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #FFD700;
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #FFD700;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #003366;
+    color: white;
 }
 
 button {
-    background-color: #ffd700;
+    background-color: #FFD700;
+    color: #003366;
+    font-weight: bold;
     border: none;
     padding: 10px;
+    width: 100%;
+    border-radius: 5px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 button:hover {
-    background-color: #ff8c00;
-}
-.faq-container {
-    max-width: 800px;
-    margin: auto;
+    background-color: #FFA500;
+    color: #002855;
 }
 
-.faq-item {
-    margin-bottom: 10px;
-}
-
-.faq-question {
-    width: 100%;
-    padding: 10px;
-    background-color: #FFD700;
-    color: #003366;
-    border: none;
-    cursor: pointer;
-    text-align: left;
-    font-size: 18px;
-}
-
-.faq-answer {
-    display: none;
-    padding: 10px;
-    background-color: #f4f4f4;
-    border-left: 3px solid #003366;
+/* Results */
+.result {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFD700;
 }
