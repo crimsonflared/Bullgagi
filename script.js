@@ -54,6 +54,13 @@ function calculateGrade(tabId) {
     document.querySelector(`#${tabId} .result`).textContent = `Final Grade: ${finalGrade}`;
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("course1").style.display = "block";  
+document.addEventListener("DOMContentLoaded", function() {
+    const faqButtons = document.querySelectorAll(".faq-question");
+
+    faqButtons.forEach(button => {
+        button.addEventListener("click", function() {
+            const faq = this.parentElement;
+            faq.classList.toggle("active");
+        });
+    });
 });
