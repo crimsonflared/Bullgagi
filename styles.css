@@ -1,7 +1,7 @@
 /* General Page Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #00008B; /* Dark Blue */
+    background-color: #1A237E; /* Softer Dark Blue */
     color: #ADD8E6; /* Light Blue */
     text-align: center;
     margin: 0;
@@ -10,8 +10,8 @@ body {
 
 /* Header */
 header {
-    background-color: #000080; /* Slightly Darker Blue */
-    padding: 15px 0;
+    background-color: #00008B; /* Dark Blue */
+    padding: 20px;
     box-shadow: 0px 4px 8px rgba(255, 215, 0, 0.3); /* Gold Shadow */
 }
 
@@ -21,9 +21,14 @@ h1 {
     color: #FFD700; /* Gold */
 }
 
-/* Navigation */
+/* Navigation Bar */
 nav {
-    margin-top: 10px;
+    background-color: #000080; /* Slightly Lighter Dark Blue */
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0px 4px 8px rgba(255, 215, 0, 0.3);
 }
 
 nav a {
@@ -32,106 +37,27 @@ nav a {
     font-weight: bold;
     margin: 0 15px;
     transition: color 0.3s;
+    font-size: 18px;
 }
 
 nav a:hover {
     color: #ADD8E6; /* Light Blue */
 }
 
-/* Tabs */
-.tabs {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
-.tab-button {
-    background-color: #00008B; /* Dark Blue */
-    color: #FFD700; /* Gold */
-    border: 2px solid #FFD700; /* Gold Border */
-    padding: 10px 15px;
-    margin: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-.tab-button:hover, .tab-button.active {
-    background-color: #FFD700; /* Gold */
-    color: #00008B; /* Dark Blue */
-}
-
-/* Grade Calculator Section */
-.grade-container {
-    max-width: 500px;
-    margin: auto;
-    background-color: #000080; /* Darker Blue */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.5); /* Gold Glow */
-    margin-top: 20px;
-}
-
-h2 {
-    color: #FFD700; /* Gold */
-}
-
-h3 {
-    color: #FFD700; /* Gold */
-}
-
-label {
-    display: block;
-    margin: 10px 0 5px;
-    font-weight: bold;
-    color: #FFD700; /* Gold */
-}
-
-input {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #FFD700; /* Gold Border */
-    border-radius: 5px;
-    margin-bottom: 10px;
-    background-color: #00008B; /* Dark Blue */
-    color: #ADD8E6; /* Light Blue */
-    font-size: 16px;
-    text-align: center;
-}
-
-button {
-    background-color: #FFD700; /* Gold */
-    color: #00008B; /* Dark Blue */
-    font-weight: bold;
-    border: none;
-    padding: 12px;
-    width: 100%;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-    font-size: 16px;
-}
-
-button:hover {
-    background-color: #ADD8E6; /* Light Blue */
-    color: #00008B; /* Dark Blue */
-}
 /* FAQ Section */
 .faq-container {
     max-width: 800px;
     margin: 40px auto;
-    background-color: #000080; /* Slightly Darker Blue */
-    padding: 20px;
-    border-radius: 10px;
+    background-color: #283593; /* Softer Dark Blue */
+    padding: 25px;
+    border-radius: 12px;
     box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.5); /* Gold Glow */
 }
 
 /* FAQ Question */
 .faq-question {
     width: 100%;
-    background-color: #00008B; /* Dark Blue */
+    background-color: #3949AB; /* Softer Dark Blue */
     color: #FFD700; /* Gold */
     border: none;
     padding: 15px;
@@ -141,6 +67,7 @@ button:hover {
     cursor: pointer;
     transition: background 0.3s;
     border-bottom: 2px solid #FFD700; /* Gold Border */
+    border-radius: 5px;
 }
 
 .faq-question:hover {
@@ -150,12 +77,13 @@ button:hover {
 
 /* FAQ Answer */
 .faq-answer {
-    background-color: #ADD8E6; /* Light Blue */
+    background-color: #E3F2FD; /* Light Blue */
     color: #00008B; /* Dark Blue */
-    padding: 10px;
+    padding: 12px;
     display: none;
     border-left: 5px solid #FFD700; /* Gold Accent */
     font-size: 16px;
+    border-radius: 5px;
     transition: max-height 0.3s ease-out;
 }
 
@@ -163,22 +91,19 @@ button:hover {
 .faq.active .faq-answer {
     display: block;
 }
-/* Results */
-.result {
-    margin-top: 15px;
-    font-size: 22px;
-    font-weight: bold;
-    color: #FFD700; /* Gold */
-}
 
 /* Responsive Design */
 @media screen and (max-width: 600px) {
-    .grade-container {
+    .faq-container {
         width: 90%;
     }
 
-    .tab-button {
-        padding: 8px;
-        font-size: 14px;
+    .faq-question {
+        font-size: 16px;
+    }
+
+    nav a {
+        font-size: 16px;
+        margin: 0 10px;
     }
 }
