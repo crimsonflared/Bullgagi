@@ -59,20 +59,27 @@ document.addEventListener("DOMContentLoaded", function() {
 
     faqButtons.forEach(button => {
         button.addEventListener("click", function() {
-            // Find the parent .faq div
             const faq = this.parentElement;
-
-            // Toggle the "active" class
-            faq.classList.toggle("active");
-
-            // Find the corresponding answer
             const answer = faq.querySelector(".faq-answer");
 
-            // Toggle answer visibility
+            // Close other open FAQs (optional)
+            document.querySelectorAll(".faq-answer").forEach(item => {
+                if (item !== answer) {
+                    item.style.maxHeight = null;
+                    item.style.padding = "0 15px";
+                }
+            });
+
+            // Toggle the active class
+            faq.classList.toggle("active");
+
+            // Smoothly expand/collapse the answer
             if (faq.classList.contains("active")) {
-                answer.style.display = "block";
+                answer.style.maxHeight = answer.scrollHeight + "px";
+                answer.style.padding = "10px 15px";
             } else {
-                answer.style.display = "none";
+                answer.style.maxHeight = null;
+                answer.style.padding = "0 15px";
             }
         });
     });
