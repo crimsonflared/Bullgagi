@@ -54,6 +54,20 @@ function calculateGrade(tabId) {
     document.querySelector(`#${tabId} .result`).textContent = `Final Grade: ${finalGrade}`;
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("course1").style.display = "block";  
+//document.addEventListener("DOMContentLoaded", () => {
+  //  document.getElementById("course1").style.display = "block";  
+//});
+document.addEventListener("DOMContentLoaded", function() {
+    let faqButtons = document.querySelectorAll(".faq-question");
+
+    faqButtons.forEach(button => {
+        button.addEventListener("click", function() {
+            let answer = this.nextElementSibling;
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+            } else {
+                answer.style.display = "block";
+            }
+        });
+    });
 });
