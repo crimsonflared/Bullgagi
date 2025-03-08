@@ -31,3 +31,29 @@ button {
 button:hover {
     background-color: #ff8c00;
 }
+.faq-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 10px;
+    background-color: #FFD700;
+    color: #003366;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 18px;
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-left: 3px solid #003366;
+}
